@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ironbeard - Your AI. Your Rules. Your Forge.</title>
+  <meta name="description" content="A local-first AI agent platform. Download, double-click, done. No CLI, no Docker, no config files. Your data stays on your machine.">
+  <meta name="theme-color" content="#0e0b08">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ironbeard - Your AI. Your Rules. Your Forge.">
+  <meta property="og:description" content="A local-first AI agent platform. Download, double-click, done. 1,000 free beta spots available.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ironbeard.ai">
+  <meta property="og:image" content="https://ironbeard.ai/mascot.png">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ironbeardai">
+  <meta name="twitter:title" content="Ironbeard - Your AI. Your Rules. Your Forge.">
+  <meta name="twitter:description" content="A local-first AI agent platform. Download, double-click, done. 1,000 free beta spots available.">
+  <meta name="twitter:image" content="https://ironbeard.ai/mascot.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="mascot.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ==================== NAV ==================== -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="container nav-inner">
+      <a href="#" class="nav-brand" aria-label="Ironbeard home">
+        <img src="mascot.png" alt="" width="36" height="36">
+        <span>Ironbeard</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#problem">Why</a></li>
+        <li><a href="#solution">Features</a></li>
+        <li><a href="#how-it-works">How It Works</a></li>
+        <li><a href="#specs">Specs</a></li>
+        <li><a href="#download" class="nav-cta">Download Beta</a></li>
+      </ul>
+
+      <button class="nav-mobile-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <line x1="3" y1="12" x2="21" y2="12"></line>
+          <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ==================== HERO ==================== -->
+  <section class="hero" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="pulse"></span>
+            Beta launches Feb 28, 2026
+          </div>
+
+          <h1>
+            AI agents that <span class="highlight">just work.</span><br>
+            No terminal required.
+          </h1>
+
+          <p class="hero-sub">Download. Double-click. Done.</p>
+          <p class="hero-tagline">Your AI. Your rules. Your forge.</p>
+
+          <div class="counter-badge fade-in">
+            <div class="counter-bar">
+              <div class="counter-bar-fill" id="counter-fill" style="width: 0%"></div>
+            </div>
+            <span class="counter-text" id="counter-text">
+              <strong>1,000</strong> of 1,000 spots remaining
+            </span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#download" class="btn btn-primary btn-lg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              Download Beta (Free)
+            </a>
+            <a href="#solution" class="btn btn-secondary btn-lg">Learn More</a>
+          </div>
+
+          <div class="hero-meta">
+            <div class="hero-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"></rect><path d="M3 9h18"></path></svg>
+              <span>Windows (.exe)</span>
+            </div>
+            <div class="hero-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+              <span>Local-first &amp; private</span>
+            </div>
+            <div class="hero-meta-item">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>Beta testers get <strong>75%+ off</strong></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual fade-in">
+          <div class="hero-mascot-wrapper">
+            <img src="mascot.png" alt="Ironbeard the Master Smith - a dwarf blacksmith forging at an anvil with a glowing hammer" class="hero-mascot" width="480" height="480">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROBLEM ==================== -->
+  <section class="problem" id="problem">
+    <div class="container">
+      <div class="section-divider fade-in"></div>
+      <p class="section-label fade-in">The Problem</p>
+      <h2 class="section-title fade-in">AI agents are powerful.<br>Getting them running isn't.</h2>
+      <p class="section-subtitle fade-in">
+        The tools exist. But for most people, the setup alone is a dealbreaker.
+      </p>
+
+      <div class="problem-grid">
+        <div class="problem-card fade-in fade-in-delay-1">
+          <div class="problem-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
+          </div>
+          <h3>CLI complexity</h3>
+          <p>Terminal commands, Docker containers, config files, dependency hell. Most people never get past step one.</p>
+        </div>
+
+        <div class="problem-card fade-in fade-in-delay-2">
+          <div class="problem-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><line x1="9" y1="12" x2="15" y2="12"></line></svg>
+          </div>
+          <h3>Security nightmares</h3>
+          <p>Agents with keys to everything. Your API tokens, your files, your data -- all exposed with zero isolation.</p>
+        </div>
+
+        <div class="problem-card fade-in fade-in-delay-3">
+          <div class="problem-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="8" y1="15" x2="16" y2="15"></line><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+          </div>
+          <h3>Context chaos</h3>
+          <p>Work bleeds into personal projects. Token counts explode. Conversation history becomes an unmanageable mess.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SOLUTION ==================== -->
+  <section class="solution" id="solution">
+    <div class="container">
+      <div class="section-divider fade-in"></div>
+      <p class="section-label fade-in">The Solution</p>
+      <h2 class="section-title fade-in">Three pillars. One platform.</h2>
+      <p class="section-subtitle fade-in">
+        Built from the ground up to make AI agents accessible, secure, and controllable.
+      </p>
+
+      <div class="pillar-grid">
+        <!-- Pillar 1: Master Smith -->
+        <div class="pillar-card fade-in fade-in-delay-1">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"></path><path d="M2 17l10 5 10-5"></path><path d="M2 12l10 5 10-5"></path></svg>
+          </div>
+          <h3>Master Smith</h3>
+          <p class="pillar-role">Your AI Controller</p>
+          <p>Ironbeard himself. Manages multiple workspaces in parallel, keeps background tasks running, and orchestrates everything.</p>
+          <ul class="pillar-features">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Manage multiple workspaces at once
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Built in Rust -- zero lag switching
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Background tasks keep running
+            </li>
+          </ul>
+        </div>
+
+        <!-- Pillar 2: Isolated Forges -->
+        <div class="pillar-card fade-in fade-in-delay-2">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>
+          </div>
+          <h3>Isolated Forges</h3>
+          <p class="pillar-role">Sandboxed Workspaces</p>
+          <p>Each workspace is its own world. Separate permissions, knowledge vaults, system prompts, and conversation history.</p>
+          <ul class="pillar-features">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Per-forge permissions &amp; knowledge
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Full conversation isolation
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Your tax docs don't touch your side projects
+            </li>
+          </ul>
+        </div>
+
+        <!-- Pillar 3: The Forge -->
+        <div class="pillar-card fade-in fade-in-delay-3">
+          <div class="pillar-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+          </div>
+          <h3>The Forge</h3>
+          <p class="pillar-role">For Builders</p>
+          <p>Claude Code CLI built-in. Create custom tools, connect MCP servers, build workflows. Security audit before any auto-created tool activates.</p>
+          <ul class="pillar-features">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Claude Code CLI built-in
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              Custom tools &amp; workflow builder
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              MCP servers &amp; Claude skills support
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== HOW IT WORKS ==================== -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <div class="section-divider fade-in"></div>
+      <p class="section-label fade-in">Getting Started</p>
+      <h2 class="section-title fade-in">Up and running in minutes.</h2>
+      <p class="section-subtitle fade-in">
+        No package managers. No build steps. No container orchestration.
+      </p>
+
+      <div class="steps-grid">
+        <div class="step-card fade-in fade-in-delay-1">
+          <div class="step-number">1</div>
+          <h3>Download</h3>
+          <p>Grab the .exe. That's it. Single file, no installer wizards.</p>
+        </div>
+
+        <div class="step-card fade-in fade-in-delay-2">
+          <div class="step-number">2</div>
+          <h3>Add Your Keys</h3>
+          <p>Enter your API keys. Links to get them are provided right in the app.</p>
+        </div>
+
+        <div class="step-card fade-in fade-in-delay-3">
+          <div class="step-number">3</div>
+          <h3>Start Building</h3>
+          <p>Create your first forge. Your AI agent is ready to work.</p>
+        </div>
+
+        <div class="step-card fade-in fade-in-delay-4">
+          <div class="step-number">4</div>
+          <h3>Go Remote</h3>
+          <p>Connect via Tailscale to access from your phone, anywhere.</p>
+          <p class="step-optional">Optional</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TECH SPECS ==================== -->
+  <section class="specs" id="specs">
+    <div class="container">
+      <div class="section-divider fade-in"></div>
+      <p class="section-label fade-in">Technical Details</p>
+      <h2 class="section-title fade-in">Built lean. Runs anywhere.</h2>
+      <p class="section-subtitle fade-in">
+        No cloud dependency. Your data never leaves your machine.
+      </p>
+
+      <div class="specs-grid">
+        <div class="spec-item fade-in fade-in-delay-1">
+          <div class="spec-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+          </div>
+          <div>
+            <h4>Windows Only (For Now)</h4>
+            <p>Mac and Linux support coming soon.</p>
+          </div>
+        </div>
+
+        <div class="spec-item fade-in fade-in-delay-2">
+          <div class="spec-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect><path d="M15 2v2"></path><path d="M15 20v2"></path><path d="M2 15h2"></path><path d="M2 9h2"></path><path d="M20 15h2"></path><path d="M20 9h2"></path><path d="M9 2v2"></path><path d="M9 20v2"></path></svg>
+          </div>
+          <div>
+            <h4>Runs on $450 Hardware</h4>
+            <p>No GPU required. Works on modest machines.</p>
+          </div>
+        </div>
+
+        <div class="spec-item fade-in fade-in-delay-3">
+          <div class="spec-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+          </div>
+          <div>
+            <h4>Claude API Key Required</h4>
+            <p>Gemini support optional. Bring your own keys.</p>
+          </div>
+        </div>
+
+        <div class="spec-item fade-in fade-in-delay-4">
+          <div class="spec-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 12 15 16 10"></polyline></svg>
+          </div>
+          <div>
+            <h4>100% Local</h4>
+            <p>Your data stays on your machine. Always.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== TRUST ==================== -->
+  <section class="trust" id="trust">
+    <div class="container">
+      <div class="trust-content fade-in">
+        <div class="section-divider"></div>
+        <p class="section-label">The Story</p>
+
+        <blockquote class="trust-quote">
+          Built as a personal project over the past year. Saw OpenClaw explode and realized the thing I made for myself could help others. Decided to share it.
+        </blockquote>
+        <p class="trust-author">-- Solo dev. Craftsman energy. Quality over hype.</p>
+
+        <div class="trust-points">
+          <div class="trust-point">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Built in Rust for performance
+          </div>
+          <div class="trust-point">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Free beta = real-world stress testing
+          </div>
+          <div class="trust-point">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            Beta testers get 75%+ off future license
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FINAL CTA ==================== -->
+  <section class="final-cta" id="download">
+    <div class="container">
+      <h2 class="fade-in">Ready to forge?</h2>
+      <p class="fade-in">Free beta. 1,000 spots. No credit card. No strings.</p>
+
+      <div class="counter-badge fade-in" style="margin: 0 auto 28px; width: fit-content;">
+        <div class="counter-bar">
+          <div class="counter-bar-fill" style="width: 0%" id="counter-fill-footer"></div>
+        </div>
+        <span class="counter-text" id="counter-text-footer">
+          <strong>1,000</strong> of 1,000 spots remaining
+        </span>
+      </div>
+
+      <div class="final-cta-actions fade-in">
+        <a href="#" class="btn btn-primary btn-lg" id="download-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+          Download Beta (Free)
+        </a>
+      </div>
+
+      <div class="email-capture fade-in">
+        <p>Miss the window? Join the waitlist for the next batch.</p>
+        <form class="email-form" action="#" method="post">
+          <input type="email" placeholder="you@email.com" required aria-label="Email address">
+          <button type="submit">Notify Me</button>
+        </form>
+        <p class="email-success"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="mascot.png" alt="" width="28" height="28">
+        <span>Ironbeard</span>
+      </div>
+
+      <p class="footer-tagline">Their Forge, Their Fire.</p>
+
+      <div class="footer-links">
+        <a href="https://x.com/ironbeardai" target="_blank" rel="noopener noreferrer" aria-label="Follow Ironbeard on X">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          @ironbeardai
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+
+  <!-- Update footer counter to match hero counter -->
+  <script>
+    (function() {
+      var heroFill = document.getElementById('counter-fill');
+      var footerFill = document.getElementById('counter-fill-footer');
+      if (heroFill && footerFill) {
+        var observer = new MutationObserver(function() {
+          footerFill.style.width = heroFill.style.width;
+        });
+        observer.observe(heroFill, { attributes: true, attributeFilter: ['style'] });
+        // Also set immediately
+        footerFill.style.width = heroFill.style.width;
+      }
+    })();
+  </script>
+</body>
+</html>
