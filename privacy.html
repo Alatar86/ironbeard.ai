@@ -55,6 +55,22 @@
       color: #f0e6d8;
       -webkit-font-smoothing: antialiased;
     }
+    .mobile-backdrop {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+    }
+    .mobile-backdrop.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+    }
+    .mobile-menu.open {
+      transform: translateX(0);
+    }
   </style>
 </head>
 <body class="bg-forge-950 text-iron-100 font-body">
@@ -78,15 +94,16 @@
         </svg>
       </button>
     </div>
-    <div id="mobile-menu" class="mobile-menu fixed top-16 right-0 bottom-0 w-72 bg-forge-800/95 backdrop-blur-md border-l border-forge-500/50 p-8 flex flex-col gap-6 md:hidden" style="transform: translateX(100%);">
-      <a href="index.html#problem" class="text-iron-200 hover:text-ember transition-colors text-lg" onclick="closeMobileMenu()">The Problem</a>
-      <a href="index.html#solution" class="text-iron-200 hover:text-ember transition-colors text-lg" onclick="closeMobileMenu()">Solution</a>
-      <a href="index.html#examples" class="text-iron-200 hover:text-ember transition-colors text-lg" onclick="closeMobileMenu()">Examples</a>
-      <a href="index.html#how-it-works" class="text-iron-200 hover:text-ember transition-colors text-lg" onclick="closeMobileMenu()">How It Works</a>
-      <a href="index.html#tools" class="text-iron-200 hover:text-ember transition-colors text-lg" onclick="closeMobileMenu()">Tools</a>
-      <a href="index.html#signup" class="bg-ember hover:bg-ember-dark text-white font-semibold px-5 py-3 rounded-lg transition-colors text-center mt-4" onclick="closeMobileMenu()">Join the Beta</a>
-    </div>
   </nav>
+  <div id="mobile-backdrop" class="mobile-backdrop fixed inset-0 top-16 z-40 bg-black/60 md:hidden"></div>
+  <div id="mobile-menu" class="mobile-menu fixed top-16 right-0 bottom-0 w-72 z-50 bg-forge-800 border-l border-forge-500/50 p-8 flex flex-col gap-6 md:hidden">
+    <a href="index.html#problem" class="text-iron-200 hover:text-ember transition-colors text-lg" onclick="closeMobileMenu()">The Problem</a>
+    <a href="index.html#solution" class="text-iron-200 hover:text-ember transition-colors text-lg" onclick="closeMobileMenu()">Solution</a>
+    <a href="index.html#examples" class="text-iron-200 hover:text-ember transition-colors text-lg" onclick="closeMobileMenu()">Examples</a>
+    <a href="index.html#how-it-works" class="text-iron-200 hover:text-ember transition-colors text-lg" onclick="closeMobileMenu()">How It Works</a>
+    <a href="index.html#tools" class="text-iron-200 hover:text-ember transition-colors text-lg" onclick="closeMobileMenu()">Tools</a>
+    <a href="index.html#signup" class="bg-ember hover:bg-ember-dark text-white font-semibold px-5 py-3 rounded-lg transition-colors text-center mt-4" onclick="closeMobileMenu()">Join the Beta</a>
+  </div>
 
 
   <!-- ========== CONTENT ========== -->
@@ -235,21 +252,29 @@
   <script>
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
+    const mobileBackdrop = document.getElementById('mobile-backdrop');
     const iconOpen = document.getElementById('menu-icon-open');
     const iconClose = document.getElementById('menu-icon-close');
     let menuOpen = false;
     function closeMobileMenu() {
       menuOpen = false;
-      mobileMenu.style.transform = 'translateX(100%)';
+      mobileMenu.classList.remove('open');
+      mobileBackdrop.classList.remove('open');
       iconOpen.classList.remove('hidden');
       iconClose.classList.add('hidden');
     }
     menuToggle?.addEventListener('click', () => {
       menuOpen = !menuOpen;
-      mobileMenu.style.transform = menuOpen ? 'translateX(0)' : 'translateX(100%)';
-      iconOpen.classList.toggle('hidden', menuOpen);
-      iconClose.classList.toggle('hidden', !menuOpen);
+      if (menuOpen) {
+        mobileMenu.classList.add('open');
+        mobileBackdrop.classList.add('open');
+        iconOpen.classList.add('hidden');
+        iconClose.classList.remove('hidden');
+      } else {
+        closeMobileMenu();
+      }
     });
+    mobileBackdrop?.addEventListener('click', closeMobileMenu);
   </script>
 </body>
 </html>
