@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Ironbeard</title>
+  <meta name="description" content="Privacy Policy for Ironbeard — local AI assistant software. We don't collect your data.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forge: {
+              950: '#080808',
+              900: '#0a0a0a',
+              800: '#111111',
+              700: '#161616',
+              600: '#1a1a1a',
+              500: '#222222',
+              400: '#2a2a2a',
+              300: '#333333',
+            },
+            ember: {
+              DEFAULT: '#f97316',
+              light: '#fb923c',
+              dark: '#ea580c',
+              glow: 'rgba(249, 115, 22, 0.15)',
+            },
+            iron: {
+              100: '#f0e6d8',
+              200: '#c4b8a8',
+              300: '#9a8e7e',
+              400: '#7a7068',
+              500: '#5a5048',
+            }
+          },
+          fontFamily: {
+            heading: ['Space Grotesk', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #080808;
+      color: #f0e6d8;
+      -webkit-font-smoothing: antialiased;
+    }
+  </style>
+</head>
+<body class="bg-forge-950 text-iron-100 font-body">
+
+  <!-- ========== NAV ========== -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-forge-950/80 backdrop-blur-md border-b border-forge-500/50">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="font-heading font-bold text-xl tracking-widest text-iron-100">IRONBEARD</a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html#problem" class="text-sm text-iron-300 hover:text-ember transition-colors">The Problem</a>
+        <a href="index.html#solution" class="text-sm text-iron-300 hover:text-ember transition-colors">Solution</a>
+        <a href="index.html#examples" class="text-sm text-iron-300 hover:text-ember transition-colors">Examples</a>
+        <a href="index.html#how-it-works" class="text-sm text-iron-300 hover:text-ember transition-colors">How It Works</a>
+        <a href="index.html#tools" class="text-sm text-iron-300 hover:text-ember transition-colors">Tools</a>
+        <a href="index.html#signup" class="bg-ember hover:bg-ember-dark text-white text-sm font-semibold px-5 py-2 rounded-lg transition-colors">Join the Beta</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden text-iron-200 hover:text-ember transition-colors" aria-label="Toggle menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          <path id="menu-icon-close" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" class="hidden"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="mobile-menu fixed top-16 right-0 bottom-0 w-72 bg-forge-800/95 backdrop-blur-md border-l border-forge-500/50 p-8 flex flex-col gap-6 md:hidden" style="transform: translateX(100%);">
+      <a href="index.html#problem" class="text-iron-200 hover:text-ember transition-colors text-lg" onclick="closeMobileMenu()">The Problem</a>
+      <a href="index.html#solution" class="text-iron-200 hover:text-ember transition-colors text-lg" onclick="closeMobileMenu()">Solution</a>
+      <a href="index.html#examples" class="text-iron-200 hover:text-ember transition-colors text-lg" onclick="closeMobileMenu()">Examples</a>
+      <a href="index.html#how-it-works" class="text-iron-200 hover:text-ember transition-colors text-lg" onclick="closeMobileMenu()">How It Works</a>
+      <a href="index.html#tools" class="text-iron-200 hover:text-ember transition-colors text-lg" onclick="closeMobileMenu()">Tools</a>
+      <a href="index.html#signup" class="bg-ember hover:bg-ember-dark text-white font-semibold px-5 py-3 rounded-lg transition-colors text-center mt-4" onclick="closeMobileMenu()">Join the Beta</a>
+    </div>
+  </nav>
+
+
+  <!-- ========== CONTENT ========== -->
+  <main class="pt-28 pb-20 px-6">
+    <div class="max-w-3xl mx-auto">
+
+      <h1 class="font-heading text-4xl md:text-5xl font-bold mb-2">Privacy Policy</h1>
+      <p class="text-iron-400 text-sm mb-10 pb-6 border-b border-forge-500/50">Last Updated: February 21, 2026</p>
+
+      <div class="space-y-8 text-iron-200 leading-relaxed">
+
+        <p>This Privacy Policy describes how <strong class="text-iron-100">Ironbeard</strong> ("the Software"), developed by <strong class="text-iron-100">Ironbeard</strong> ("we," "us," or "our"), handles your information. We are committed to being transparent about our data practices — which, in short, means <strong class="text-iron-100">we don't collect your data</strong>.</p>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-iron-100 mb-3">1. Our Core Privacy Principle</h2>
+          <div class="bg-forge-700 border-l-4 border-green-500 rounded-r-lg p-5 mt-2">
+            <p class="text-iron-200"><strong class="text-iron-100">Ironbeard does not collect, store, transmit, or have access to any of your personal data.</strong> The Software runs entirely on your local machine. We have no servers that receive your information, no analytics dashboards, and no telemetry. We cannot see what you do with the Software.</p>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-iron-100 mb-3">2. Information We Collect</h2>
+          <p><strong class="text-iron-100">None.</strong> We do not collect any information from you through the Software. Specifically:</p>
+          <ul class="list-disc list-outside ml-6 mt-3 space-y-2 text-iron-300">
+            <li>No personal information (name, email, address)</li>
+            <li>No usage data or analytics</li>
+            <li>No telemetry or crash reports</li>
+            <li>No device identifiers or fingerprinting</li>
+            <li>No cookies, tracking pixels, or similar technologies</li>
+            <li>No browsing or activity history</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-iron-100 mb-3">3. Data Stored on Your Device</h2>
+          <p>The Software stores certain data locally on your computer to function. This data never leaves your machine through us:</p>
+          <div class="mt-4 overflow-x-auto">
+            <table class="w-full text-sm">
+              <thead>
+                <tr class="border-b border-forge-500/50">
+                  <th class="text-left py-3 pr-4 text-iron-100 font-semibold">Data Type</th>
+                  <th class="text-left py-3 pr-4 text-iron-100 font-semibold">Storage Location</th>
+                  <th class="text-left py-3 text-iron-100 font-semibold">Purpose</th>
+                </tr>
+              </thead>
+              <tbody class="text-iron-300">
+                <tr class="border-b border-forge-500/30">
+                  <td class="py-3 pr-4">API Keys</td>
+                  <td class="py-3 pr-4">Operating System Keyring</td>
+                  <td class="py-3">Authentication with third-party AI services</td>
+                </tr>
+                <tr class="border-b border-forge-500/30">
+                  <td class="py-3 pr-4">User Content</td>
+                  <td class="py-3 pr-4">Local Application Data</td>
+                  <td class="py-3">Your inputs, outputs, and saved work</td>
+                </tr>
+                <tr class="border-b border-forge-500/30">
+                  <td class="py-3 pr-4">Application Settings</td>
+                  <td class="py-3 pr-4">Local Configuration Files</td>
+                  <td class="py-3">Your preferences and configuration</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p class="mt-4">You have full control over this data. You can delete it at any time by uninstalling the Software and removing its associated data files from your computer.</p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-iron-100 mb-3">4. Third-Party Services</h2>
+          <div class="bg-forge-700 border-l-4 border-ember rounded-r-lg p-5 mt-2 mb-4">
+            <p class="text-iron-200"><strong class="text-iron-100">Important:</strong> While we do not collect your data, the Software connects to third-party AI services using API keys that you provide. When you use these services, your data is transmitted directly from your computer to those providers.</p>
+          </div>
+          <p>The Software may connect to the following third-party services (depending on your configuration):</p>
+          <ul class="list-disc list-outside ml-6 mt-3 space-y-2 text-iron-300">
+            <li><strong class="text-iron-100">Anthropic</strong> — When you use AI features powered by Claude. Your prompts and content are sent to Anthropic's servers and are subject to <a href="https://www.anthropic.com/privacy" target="_blank" class="text-ember hover:text-ember-light transition-colors underline underline-offset-2">Anthropic's Privacy Policy</a>.</li>
+            <li><strong class="text-iron-100">Google</strong> — When you use AI features powered by Google's services. Your data is subject to <a href="https://policies.google.com/privacy" target="_blank" class="text-ember hover:text-ember-light transition-colors underline underline-offset-2">Google's Privacy Policy</a>.</li>
+          </ul>
+          <p class="mt-4">We strongly encourage you to review the privacy policies of any third-party services you connect to through the Software. We have no control over how these providers collect, use, or store your data.</p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-iron-100 mb-3">5. Sensitive Information</h2>
+          <p>You may choose to input personal, sensitive, or confidential information into the Software. Please be aware that:</p>
+          <ul class="list-disc list-outside ml-6 mt-3 space-y-2 text-iron-300">
+            <li>Any data you enter may be sent to third-party API providers as part of normal Software functionality.</li>
+            <li>You are solely responsible for deciding what information to input.</li>
+            <li>We recommend exercising caution with highly sensitive data such as financial records, medical information, passwords, or other confidential material.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-iron-100 mb-3">6. Data Security</h2>
+          <p>Your API keys are stored in your operating system's secure keyring, which provides encryption at the OS level. However, the developer is not a professional security engineer, and <strong class="text-iron-100">no guarantees are made regarding the security of the Software</strong>. You use the Software at your own risk. Please refer to our <a href="terms.html" class="text-ember hover:text-ember-light transition-colors underline underline-offset-2">Terms and Conditions</a> for the full disclaimer of warranties.</p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-iron-100 mb-3">7. Children's Privacy</h2>
+          <p>The Software is not intended for use by individuals under the age of 13. We do not knowingly collect any information from children, as we do not collect information from anyone.</p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-iron-100 mb-3">8. LemonSqueezy (Payment Processing)</h2>
+          <p>If you purchase a license for the Software, your transaction is processed by <strong class="text-iron-100">LemonSqueezy</strong>, our payment provider and Merchant of Record. LemonSqueezy may collect personal and payment information necessary to process your purchase. This data is handled according to <a href="https://www.lemonsqueezy.com/privacy" target="_blank" class="text-ember hover:text-ember-light transition-colors underline underline-offset-2">LemonSqueezy's Privacy Policy</a>. We do not have access to your full payment details.</p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-iron-100 mb-3">9. Your Rights</h2>
+          <p>Since we do not collect or store any of your personal data, there is no data for us to provide, correct, or delete. All of your data resides on your own computer under your full control. If you wish to remove all data associated with the Software, simply uninstall it and delete its local data files.</p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-iron-100 mb-3">10. Changes to This Policy</h2>
+          <p>We may update this Privacy Policy from time to time. Any changes will be reflected by the "Last Updated" date at the top of this page. Continued use of the Software after changes constitutes your acceptance of the revised policy.</p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-iron-100 mb-3">11. Contact</h2>
+          <p>If you have questions or concerns about this Privacy Policy, please contact us at <a href="mailto:ironbeardai@gmail.com" class="text-ember hover:text-ember-light transition-colors underline underline-offset-2">ironbeardai@gmail.com</a>.</p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="border-t border-forge-500/50 py-8">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-iron-400 text-sm">&copy; 2026 Ironbeard</p>
+      <div class="flex items-center gap-6">
+        <a href="terms.html" class="text-iron-400 hover:text-ember transition-colors text-sm">Terms &amp; Conditions</a>
+        <a href="privacy.html" class="text-iron-400 hover:text-ember transition-colors text-sm">Privacy Policy</a>
+        <a href="https://twitter.com/ironbeardai" target="_blank" rel="noopener noreferrer" class="text-iron-400 hover:text-ember transition-colors inline-flex items-center gap-2 text-sm">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          @ironbeardai
+        </a>
+        <a href="mailto:ironbeardai@gmail.com" class="text-iron-400 hover:text-ember transition-colors inline-flex items-center gap-2 text-sm">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
+          ironbeardai@gmail.com
+        </a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('menu-icon-open');
+    const iconClose = document.getElementById('menu-icon-close');
+    let menuOpen = false;
+    function closeMobileMenu() {
+      menuOpen = false;
+      mobileMenu.style.transform = 'translateX(100%)';
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+    }
+    menuToggle?.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      mobileMenu.style.transform = menuOpen ? 'translateX(0)' : 'translateX(100%)';
+      iconOpen.classList.toggle('hidden', menuOpen);
+      iconClose.classList.toggle('hidden', !menuOpen);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms and Conditions — Ironbeard</title>
+  <meta name="description" content="Terms and Conditions for Ironbeard — local AI assistant software.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forge: {
+              950: '#080808',
+              900: '#0a0a0a',
+              800: '#111111',
+              700: '#161616',
+              600: '#1a1a1a',
+              500: '#222222',
+              400: '#2a2a2a',
+              300: '#333333',
+            },
+            ember: {
+              DEFAULT: '#f97316',
+              light: '#fb923c',
+              dark: '#ea580c',
+              glow: 'rgba(249, 115, 22, 0.15)',
+            },
+            iron: {
+              100: '#f0e6d8',
+              200: '#c4b8a8',
+              300: '#9a8e7e',
+              400: '#7a7068',
+              500: '#5a5048',
+            }
+          },
+          fontFamily: {
+            heading: ['Space Grotesk', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #080808;
+      color: #f0e6d8;
+      -webkit-font-smoothing: antialiased;
+    }
+  </style>
+</head>
+<body class="bg-forge-950 text-iron-100 font-body">
+
+  <!-- ========== NAV ========== -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-forge-950/80 backdrop-blur-md border-b border-forge-500/50">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="index.html" class="font-heading font-bold text-xl tracking-widest text-iron-100">IRONBEARD</a>
+      <div class="hidden md:flex items-center gap-8">
+        <a href="index.html#problem" class="text-sm text-iron-300 hover:text-ember transition-colors">The Problem</a>
+        <a href="index.html#solution" class="text-sm text-iron-300 hover:text-ember transition-colors">Solution</a>
+        <a href="index.html#examples" class="text-sm text-iron-300 hover:text-ember transition-colors">Examples</a>
+        <a href="index.html#how-it-works" class="text-sm text-iron-300 hover:text-ember transition-colors">How It Works</a>
+        <a href="index.html#tools" class="text-sm text-iron-300 hover:text-ember transition-colors">Tools</a>
+        <a href="index.html#signup" class="bg-ember hover:bg-ember-dark text-white text-sm font-semibold px-5 py-2 rounded-lg transition-colors">Join the Beta</a>
+      </div>
+      <button id="menu-toggle" class="md:hidden text-iron-200 hover:text-ember transition-colors" aria-label="Toggle menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          <path id="menu-icon-close" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" class="hidden"/>
+        </svg>
+      </button>
+    </div>
+    <div id="mobile-menu" class="mobile-menu fixed top-16 right-0 bottom-0 w-72 bg-forge-800/95 backdrop-blur-md border-l border-forge-500/50 p-8 flex flex-col gap-6 md:hidden" style="transform: translateX(100%);">
+      <a href="index.html#problem" class="text-iron-200 hover:text-ember transition-colors text-lg" onclick="closeMobileMenu()">The Problem</a>
+      <a href="index.html#solution" class="text-iron-200 hover:text-ember transition-colors text-lg" onclick="closeMobileMenu()">Solution</a>
+      <a href="index.html#examples" class="text-iron-200 hover:text-ember transition-colors text-lg" onclick="closeMobileMenu()">Examples</a>
+      <a href="index.html#how-it-works" class="text-iron-200 hover:text-ember transition-colors text-lg" onclick="closeMobileMenu()">How It Works</a>
+      <a href="index.html#tools" class="text-iron-200 hover:text-ember transition-colors text-lg" onclick="closeMobileMenu()">Tools</a>
+      <a href="index.html#signup" class="bg-ember hover:bg-ember-dark text-white font-semibold px-5 py-3 rounded-lg transition-colors text-center mt-4" onclick="closeMobileMenu()">Join the Beta</a>
+    </div>
+  </nav>
+
+
+  <!-- ========== CONTENT ========== -->
+  <main class="pt-28 pb-20 px-6">
+    <div class="max-w-3xl mx-auto">
+
+      <h1 class="font-heading text-4xl md:text-5xl font-bold mb-2">Terms &amp; Conditions</h1>
+      <p class="text-iron-400 text-sm mb-10 pb-6 border-b border-forge-500/50">Last Updated: February 21, 2026</p>
+
+      <div class="space-y-8 text-iron-200 leading-relaxed">
+
+        <p>These Terms and Conditions ("Terms") govern your use of <strong class="text-iron-100">Ironbeard</strong> ("the Software"), developed and distributed by <strong class="text-iron-100">Ironbeard</strong> ("we," "us," or "our"). By downloading, installing, or using the Software, you agree to be bound by these Terms. If you do not agree, do not use the Software.</p>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-iron-100 mb-3">1. License Grant</h2>
+          <p>We grant you a limited, non-exclusive, non-transferable license to install and use the Software on <strong class="text-iron-100">one (1) computer per license</strong>. Each license is tied to a single machine. You may not share, sublicense, resell, or distribute the Software or your license to any third party.</p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-iron-100 mb-3">2. Ownership</h2>
+          <p>Upon purchase, you own your license to use the Software. There are no recurring subscription fees. Your license is perpetual for the version purchased. All intellectual property rights in the Software itself remain with Ironbeard.</p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-iron-100 mb-3">3. Beta Software</h2>
+          <p>The Software is currently offered as a <strong class="text-iron-100">free beta</strong>. Beta versions may contain bugs, errors, or incomplete features. By using the beta, you acknowledge that the Software is in active development and may not perform as expected. When the Software transitions to a paid release, pricing is expected to be a one-time fee per license.</p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-iron-100 mb-3">4. Updates and Support</h2>
+          <p>If you purchase a license, your purchase includes bug fixes and updates for <strong class="text-iron-100">up to one (1) year</strong> from the date of purchase, subject to our continued development of the Software. We make no guarantee that updates will be provided, that development will continue, or that support will be available. Updates are provided on a best-effort basis at our sole discretion.</p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-iron-100 mb-3">5. Third-Party Services and API Keys</h2>
+          <p>The Software allows you to connect your own API keys for third-party services, including but not limited to Anthropic and Google. By connecting these services:</p>
+          <ul class="list-disc list-outside ml-6 mt-3 space-y-2 text-iron-300">
+            <li>You acknowledge that your data will be transmitted to and processed by these third-party providers according to <strong class="text-iron-100">their</strong> terms of service and privacy policies.</li>
+            <li>You are solely responsible for managing, securing, and paying for your own API keys and any charges incurred through third-party services.</li>
+            <li>We have no control over, and accept no responsibility for, how third-party services handle your data.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-iron-100 mb-3">6. Data and Privacy</h2>
+          <p>All user data, including API keys, remains stored locally on your computer. API keys are stored in your operating system's secure keyring. We do not collect, transmit, store, or have access to any of your data. We do not use telemetry or analytics of any kind. For more information, please review our <a href="privacy.html" class="text-ember hover:text-ember-light transition-colors underline underline-offset-2">Privacy Policy</a>.</p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-iron-100 mb-3">7. Sensitive Information</h2>
+          <div class="bg-forge-700 border-l-4 border-ember rounded-r-lg p-5 mt-2">
+            <p class="text-iron-200"><strong class="text-iron-100">Important:</strong> You may choose to input personal, sensitive, or confidential information into the Software. You do so entirely at your own risk. We strongly recommend that you exercise caution when entering sensitive data and understand the implications of transmitting such data to third-party API providers.</p>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-iron-100 mb-3">8. Disclaimer of Warranties</h2>
+          <div class="bg-forge-700 border-l-4 border-red-500 rounded-r-lg p-5 mt-2">
+            <p class="text-iron-200 uppercase font-semibold text-sm tracking-wide"><strong class="text-iron-100">THE SOFTWARE IS PROVIDED "AS IS" AND "AS AVAILABLE," WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.</strong> We make no warranties or representations regarding the Software's functionality, reliability, accuracy, security, fitness for a particular purpose, or non-infringement. The developer is not a professional software engineer and makes no claims of professional-grade development, security, or code quality. You use the Software entirely at your own risk.</p>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-iron-100 mb-3">9. Limitation of Liability</h2>
+          <div class="bg-forge-700 border-l-4 border-red-500 rounded-r-lg p-5 mt-2">
+            <p class="text-iron-200 uppercase font-semibold text-sm tracking-wide"><strong class="text-iron-100">TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IRONBEARD AND ITS DEVELOPER SHALL NOT BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES</strong> arising from or related to your use of the Software, including but not limited to: data loss, data breaches, unauthorized access to your information, API key exposure, financial losses, or damages resulting from bugs, errors, or security vulnerabilities. This limitation applies regardless of the theory of liability (contract, tort, negligence, strict liability, or otherwise), even if we have been advised of the possibility of such damages.</p>
+          </div>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-iron-100 mb-3">10. Assumption of Risk</h2>
+          <p>By using the Software, you expressly acknowledge and agree that:</p>
+          <ul class="list-disc list-outside ml-6 mt-3 space-y-2 text-iron-300">
+            <li>The Software is developed by an individual, not a professional engineering team.</li>
+            <li>The Software may contain bugs, vulnerabilities, or security flaws.</li>
+            <li>You are solely responsible for any data you input into the Software.</li>
+            <li>You are solely responsible for any consequences arising from the use of third-party API services connected through the Software.</li>
+            <li>You assume all risk associated with the installation and use of the Software.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-iron-100 mb-3">11. Refund Policy</h2>
+          <p><strong class="text-iron-100">All sales are final. No refunds will be issued under any circumstances.</strong> We encourage you to use the free beta version to evaluate the Software before making a purchase.</p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-iron-100 mb-3">12. Prohibited Uses</h2>
+          <p>You agree not to:</p>
+          <ul class="list-disc list-outside ml-6 mt-3 space-y-2 text-iron-300">
+            <li>Reverse engineer, decompile, or disassemble the Software.</li>
+            <li>Redistribute, resell, or sublicense the Software.</li>
+            <li>Use the Software for any unlawful purpose.</li>
+            <li>Attempt to circumvent any licensing restrictions.</li>
+          </ul>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-iron-100 mb-3">13. Termination</h2>
+          <p>We reserve the right to terminate or revoke your license if you violate these Terms. Upon termination, you must uninstall and destroy all copies of the Software in your possession.</p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-iron-100 mb-3">14. Changes to These Terms</h2>
+          <p>We may update these Terms at any time. Continued use of the Software following any changes constitutes your acceptance of the revised Terms. We will make reasonable efforts to notify users of material changes.</p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-iron-100 mb-3">15. Governing Law</h2>
+          <p>These Terms shall be governed by and construed in accordance with the laws of the State of South Carolina, United States, without regard to conflict of law principles.</p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-iron-100 mb-3">16. Severability</h2>
+          <p>If any provision of these Terms is found to be unenforceable or invalid, that provision shall be limited or eliminated to the minimum extent necessary, and the remaining provisions shall remain in full effect.</p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-iron-100 mb-3">17. Entire Agreement</h2>
+          <p>These Terms, together with our <a href="privacy.html" class="text-ember hover:text-ember-light transition-colors underline underline-offset-2">Privacy Policy</a>, constitute the entire agreement between you and Ironbeard regarding the Software and supersede all prior agreements and understandings.</p>
+        </div>
+
+        <div>
+          <h2 class="font-heading text-xl font-semibold text-iron-100 mb-3">18. Contact</h2>
+          <p>If you have questions about these Terms, please contact us at <a href="mailto:ironbeardai@gmail.com" class="text-ember hover:text-ember-light transition-colors underline underline-offset-2">ironbeardai@gmail.com</a>.</p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="border-t border-forge-500/50 py-8">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-iron-400 text-sm">&copy; 2026 Ironbeard</p>
+      <div class="flex items-center gap-6">
+        <a href="terms.html" class="text-iron-400 hover:text-ember transition-colors text-sm">Terms &amp; Conditions</a>
+        <a href="privacy.html" class="text-iron-400 hover:text-ember transition-colors text-sm">Privacy Policy</a>
+        <a href="https://twitter.com/ironbeardai" target="_blank" rel="noopener noreferrer" class="text-iron-400 hover:text-ember transition-colors inline-flex items-center gap-2 text-sm">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          @ironbeardai
+        </a>
+        <a href="mailto:ironbeardai@gmail.com" class="text-iron-400 hover:text-ember transition-colors inline-flex items-center gap-2 text-sm">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
+          ironbeardai@gmail.com
+        </a>
+      </div>
+    </div>
+  </footer>
+
+
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('menu-icon-open');
+    const iconClose = document.getElementById('menu-icon-close');
+    let menuOpen = false;
+    function closeMobileMenu() {
+      menuOpen = false;
+      mobileMenu.style.transform = 'translateX(100%)';
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+    }
+    menuToggle?.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      mobileMenu.style.transform = menuOpen ? 'translateX(0)' : 'translateX(100%)';
+      iconOpen.classList.toggle('hidden', menuOpen);
+      iconClose.classList.toggle('hidden', !menuOpen);
+    });
+  </script>
+</body>
+</html>
