@@ -3,53 +3,67 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ironbeard AI — Coming Soon</title>
-  <meta name="description" content="Ironbeard AI is coming. A local-first AI orchestration engine that replaces your entire SaaS stack. Launching February 28, 2026.">
-  <meta property="og:title" content="Ironbeard AI — Coming Soon">
-  <meta property="og:description" content="The forge is heating up. A local-first AI orchestration engine launching February 28, 2026.">
+  <title>Ironbeard — Your AI Assistants. Your Rules. Your Computer.</title>
+  <meta name="description" content="Set up as many AI assistants as you need — each with its own memory, tools, and personality. Your files and memory stay on your machine. You bring your own API keys.">
+  <meta property="og:title" content="Ironbeard — Local AI Assistants That Actually Work">
+  <meta property="og:description" content="Set up as many AI assistants as you need — each with its own memory, tools, and personality. Your files stay on your machine. You bring your own API keys.">
   <meta property="og:image" content="mascot.png">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ironbeard.ai">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@ironbeardai">
-  <meta name="twitter:title" content="Ironbeard AI — Coming Soon">
-  <meta name="twitter:description" content="The forge is heating up. Launching February 28, 2026.">
+  <meta name="twitter:title" content="Ironbeard — Local AI Assistants That Actually Work">
+  <meta name="twitter:description" content="Your AI assistants. Your rules. Your computer. Launching February 28, 2026.">
   <meta name="twitter:image" content="mascot.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forge: {
+              950: '#080808',
+              900: '#0a0a0a',
+              800: '#111111',
+              700: '#161616',
+              600: '#1a1a1a',
+              500: '#222222',
+              400: '#2a2a2a',
+              300: '#333333',
+            },
+            ember: {
+              DEFAULT: '#f97316',
+              light: '#fb923c',
+              dark: '#ea580c',
+              glow: 'rgba(249, 115, 22, 0.15)',
+            },
+            iron: {
+              100: '#f0e6d8',
+              200: '#c4b8a8',
+              300: '#9a8e7e',
+              400: '#7a7068',
+              500: '#5a5048',
+            }
+          },
+          fontFamily: {
+            heading: ['Space Grotesk', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
   <style>
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    :root {
-      --forge-dark: #080808;
-      --forge-card: #161616;
-      --forge-card-border: #222222;
-      --iron-100: #f0e6d8;
-      --iron-200: #c4b8a8;
-      --iron-300: #7a7068;
-      --ember: #e87420;
-      --ember-light: #ff9642;
-      --gold: #f5b731;
-    }
-
-    html, body {
-      height: 100%;
-      overflow: hidden;
-      background: var(--forge-dark);
-      color: var(--iron-100);
-      font-family: 'Inter', sans-serif;
-    }
-
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      position: relative;
+      font-family: 'Inter', sans-serif;
+      background: #080808;
+      color: #f0e6d8;
+      -webkit-font-smoothing: antialiased;
     }
 
     /* Ember particles */
@@ -60,287 +74,468 @@
       overflow: hidden;
       z-index: 0;
     }
-
     .particle {
       position: absolute;
       bottom: -10px;
       width: 3px;
       height: 3px;
       border-radius: 50%;
-      background: var(--ember);
+      background: #f97316;
       opacity: 0;
       animation: float-up linear infinite;
     }
-
     @keyframes float-up {
-      0% {
-        opacity: 0;
-        transform: translateY(0) scale(1);
-      }
-      10% {
-        opacity: 0.8;
-      }
-      80% {
-        opacity: 0.3;
-      }
-      100% {
-        opacity: 0;
-        transform: translateY(-100vh) scale(0.3);
-      }
+      0% { opacity: 0; transform: translateY(0) scale(1); }
+      10% { opacity: 0.6; }
+      80% { opacity: 0.2; }
+      100% { opacity: 0; transform: translateY(-100vh) scale(0.3); }
     }
+    .particle:nth-child(1)  { left: 5%;  animation-duration: 8s;  animation-delay: 0s;   width: 2px; height: 2px; }
+    .particle:nth-child(2)  { left: 15%; animation-duration: 10s; animation-delay: 1.5s; }
+    .particle:nth-child(3)  { left: 25%; animation-duration: 7s;  animation-delay: 0.5s; width: 4px; height: 4px; }
+    .particle:nth-child(4)  { left: 35%; animation-duration: 9s;  animation-delay: 2.5s; width: 2px; height: 2px; }
+    .particle:nth-child(5)  { left: 45%; animation-duration: 11s; animation-delay: 1s; }
+    .particle:nth-child(6)  { left: 55%; animation-duration: 8s;  animation-delay: 3.5s; width: 4px; height: 4px; }
+    .particle:nth-child(7)  { left: 65%; animation-duration: 9s;  animation-delay: 2s;   width: 2px; height: 2px; }
+    .particle:nth-child(8)  { left: 75%; animation-duration: 7s;  animation-delay: 0.5s; }
+    .particle:nth-child(9)  { left: 85%; animation-duration: 10s; animation-delay: 3s;   width: 4px; height: 4px; }
+    .particle:nth-child(10) { left: 95%; animation-duration: 8s;  animation-delay: 1.5s; }
 
-    .particle:nth-child(1)  { left: 5%;  animation-duration: 7s;  animation-delay: 0s;   width: 2px; height: 2px; }
-    .particle:nth-child(2)  { left: 12%; animation-duration: 9s;  animation-delay: 1.2s; }
-    .particle:nth-child(3)  { left: 22%; animation-duration: 6s;  animation-delay: 0.5s; width: 4px; height: 4px; }
-    .particle:nth-child(4)  { left: 30%; animation-duration: 8s;  animation-delay: 2.1s; width: 2px; height: 2px; }
-    .particle:nth-child(5)  { left: 40%; animation-duration: 10s; animation-delay: 0.8s; }
-    .particle:nth-child(6)  { left: 48%; animation-duration: 7s;  animation-delay: 3.5s; width: 4px; height: 4px; }
-    .particle:nth-child(7)  { left: 55%; animation-duration: 8s;  animation-delay: 1.7s; width: 2px; height: 2px; }
-    .particle:nth-child(8)  { left: 65%; animation-duration: 6s;  animation-delay: 0.3s; }
-    .particle:nth-child(9)  { left: 72%; animation-duration: 9s;  animation-delay: 2.8s; width: 4px; height: 4px; }
-    .particle:nth-child(10) { left: 80%; animation-duration: 7s;  animation-delay: 1.0s; }
-    .particle:nth-child(11) { left: 88%; animation-duration: 8s;  animation-delay: 3.2s; width: 2px; height: 2px; }
-    .particle:nth-child(12) { left: 95%; animation-duration: 6s;  animation-delay: 0.6s; }
-
-    /* Radial glow behind mascot */
-    .glow {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -55%);
-      width: 420px;
-      height: 420px;
-      background: radial-gradient(circle, rgba(232, 116, 32, 0.15) 0%, rgba(232, 116, 32, 0.05) 40%, transparent 70%);
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    /* Main content */
-    .container {
-      position: relative;
-      z-index: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 0;
-      padding: 24px;
-      max-width: 600px;
-      width: 100%;
-    }
-
-    /* Wordmark */
-    .wordmark {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 2.4rem;
-      letter-spacing: 0.18em;
-      color: var(--iron-100);
-      text-shadow: 0 0 40px rgba(232, 116, 32, 0.3), 0 0 80px rgba(232, 116, 32, 0.1);
-      margin-bottom: 24px;
-    }
-
-    /* Mascot */
-    .mascot-wrapper {
-      position: relative;
-      margin-bottom: 20px;
-    }
-
-    .mascot {
-      width: 240px;
-      height: auto;
-      animation: mascot-float 4s ease-in-out infinite;
-      filter: drop-shadow(0 8px 32px rgba(232, 116, 32, 0.2));
-    }
-
+    /* Mascot float animation */
     @keyframes mascot-float {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+      50% { transform: translateY(-12px); }
     }
 
-    /* Tagline */
-    .tagline {
-      font-family: 'Inter', sans-serif;
-      font-size: 1.15rem;
-      font-weight: 400;
-      color: var(--iron-200);
-      font-style: italic;
-      margin-bottom: 32px;
-      letter-spacing: 0.02em;
+    /* Section divider glow */
+    .section-glow {
+      background: radial-gradient(ellipse at center, rgba(249, 115, 22, 0.06) 0%, transparent 70%);
     }
 
-    /* Countdown */
-    .countdown {
-      display: flex;
-      gap: 12px;
-      margin-bottom: 36px;
+    /* Card hover effect */
+    .card-hover {
+      transition: border-color 0.3s ease, transform 0.3s ease;
+    }
+    .card-hover:hover {
+      border-color: rgba(249, 115, 22, 0.4);
+      transform: translateY(-2px);
     }
 
-    .countdown-box {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background: var(--forge-card);
-      border: 1px solid var(--forge-card-border);
-      border-radius: 10px;
-      padding: 14px 18px;
-      min-width: 72px;
-      transition: border-color 0.3s;
+    /* CTA button glow */
+    .btn-glow {
+      box-shadow: 0 0 20px rgba(249, 115, 22, 0.3), 0 0 60px rgba(249, 115, 22, 0.1);
+      transition: all 0.3s ease;
+    }
+    .btn-glow:hover {
+      box-shadow: 0 0 30px rgba(249, 115, 22, 0.5), 0 0 80px rgba(249, 115, 22, 0.2);
+      transform: translateY(-1px);
     }
 
-    .countdown-box:hover {
-      border-color: var(--ember);
+    /* Step connector line */
+    .step-connector {
+      position: absolute;
+      top: 24px;
+      left: calc(50% + 24px);
+      width: calc(100% - 48px);
+      height: 2px;
+      background: linear-gradient(to right, rgba(249,115,22,0.3), rgba(249,115,22,0.1));
     }
 
-    .countdown-value {
-      font-family: 'Space Grotesk', sans-serif;
-      font-weight: 700;
-      font-size: 1.8rem;
-      color: var(--ember-light);
-      line-height: 1;
-      margin-bottom: 4px;
+    /* Mobile nav */
+    .mobile-menu {
+      transform: translateX(100%);
+      transition: transform 0.3s ease;
+    }
+    .mobile-menu.open {
+      transform: translateX(0);
     }
 
-    .countdown-label {
-      font-family: 'Inter', sans-serif;
-      font-size: 0.7rem;
-      font-weight: 500;
-      color: var(--iron-300);
-      text-transform: uppercase;
-      letter-spacing: 0.1em;
-    }
-
-    /* Social links */
-    .socials {
-      display: flex;
-      gap: 24px;
-      align-items: center;
-    }
-
-    .socials a {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--iron-300);
-      text-decoration: none;
-      font-size: 0.85rem;
-      font-weight: 500;
-      transition: color 0.25s;
-    }
-
-    .socials a:hover {
-      color: var(--ember-light);
-    }
-
-    .socials svg {
-      width: 18px;
-      height: 18px;
-      flex-shrink: 0;
-    }
-
-    /* Responsive */
-    @media (max-height: 700px) {
-      .mascot { width: 180px; }
-      .wordmark { font-size: 2rem; margin-bottom: 16px; }
-      .tagline { margin-bottom: 24px; }
-      .countdown { margin-bottom: 28px; }
-      .glow { width: 320px; height: 320px; }
-    }
-
-    @media (max-width: 480px) {
-      .wordmark { font-size: 1.8rem; letter-spacing: 0.12em; }
-      .mascot { width: 180px; }
-      .countdown { gap: 8px; }
-      .countdown-box { padding: 10px 12px; min-width: 60px; }
-      .countdown-value { font-size: 1.4rem; }
-      .countdown-label { font-size: 0.65rem; }
-      .glow { width: 280px; height: 280px; }
-    }
-
-    @media (max-width: 360px) {
-      .wordmark { font-size: 1.5rem; }
-      .mascot { width: 150px; }
-      .countdown-box { padding: 8px 8px; min-width: 52px; }
-      .countdown-value { font-size: 1.2rem; }
-    }
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #080808; }
+    ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #555; }
   </style>
 </head>
-<body>
+<body class="overflow-x-hidden">
 
   <!-- Ember particles -->
   <div class="particles">
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
-    <div class="particle"></div>
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div>
     <div class="particle"></div>
   </div>
 
-  <div class="container">
-    <div class="wordmark">IRONBEARD</div>
+  <!-- ========== NAV ========== -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-forge-950/80 backdrop-blur-md border-b border-forge-500/50">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="#" class="font-heading font-bold text-xl tracking-widest text-iron-100">IRONBEARD</a>
+      <!-- Desktop nav -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#problem" class="text-sm text-iron-300 hover:text-ember transition-colors">The Problem</a>
+        <a href="#solution" class="text-sm text-iron-300 hover:text-ember transition-colors">Solution</a>
+        <a href="#examples" class="text-sm text-iron-300 hover:text-ember transition-colors">Examples</a>
+        <a href="#how-it-works" class="text-sm text-iron-300 hover:text-ember transition-colors">How It Works</a>
+        <a href="#signup" class="bg-ember hover:bg-ember-dark text-white text-sm font-semibold px-5 py-2 rounded-lg transition-colors">Join the Beta</a>
+      </div>
+      <!-- Mobile hamburger -->
+      <button id="menu-toggle" class="md:hidden text-iron-200 hover:text-ember transition-colors" aria-label="Toggle menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          <path id="menu-icon-close" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" class="hidden"/>
+        </svg>
+      </button>
+    </div>
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="mobile-menu fixed top-16 right-0 bottom-0 w-72 bg-forge-800/95 backdrop-blur-md border-l border-forge-500/50 p-8 flex flex-col gap-6 md:hidden">
+      <a href="#problem" class="text-iron-200 hover:text-ember transition-colors text-lg" onclick="closeMobileMenu()">The Problem</a>
+      <a href="#solution" class="text-iron-200 hover:text-ember transition-colors text-lg" onclick="closeMobileMenu()">Solution</a>
+      <a href="#examples" class="text-iron-200 hover:text-ember transition-colors text-lg" onclick="closeMobileMenu()">Examples</a>
+      <a href="#how-it-works" class="text-iron-200 hover:text-ember transition-colors text-lg" onclick="closeMobileMenu()">How It Works</a>
+      <a href="#signup" class="bg-ember hover:bg-ember-dark text-white font-semibold px-5 py-3 rounded-lg transition-colors text-center mt-4" onclick="closeMobileMenu()">Join the Beta</a>
+    </div>
+  </nav>
 
-    <div class="mascot-wrapper">
-      <div class="glow"></div>
-      <img class="mascot" src="mascot.png" alt="Ironbeard AI mascot — a hooded blacksmith at his forge" width="240" height="280">
+
+  <!-- ========== HERO ========== -->
+  <section class="relative min-h-screen flex items-center justify-center pt-16">
+    <!-- Background glow -->
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <div class="w-[500px] h-[500px] bg-radial rounded-full" style="background: radial-gradient(circle, rgba(249,115,22,0.12) 0%, rgba(249,115,22,0.03) 40%, transparent 70%);"></div>
     </div>
 
-    <p class="tagline">The forge is heating up.</p>
+    <div class="relative z-10 max-w-4xl mx-auto px-6 text-center py-20">
+      <!-- Wordmark -->
+      <h2 class="font-heading font-bold text-3xl md:text-4xl tracking-[0.18em] text-iron-100 mb-8" style="text-shadow: 0 0 40px rgba(249,115,22,0.3);">IRONBEARD</h2>
 
-    <div class="countdown" id="countdown">
-      <div class="countdown-box">
-        <span class="countdown-value" id="days">--</span>
-        <span class="countdown-label">Days</span>
+      <!-- Mascot -->
+      <div class="relative inline-block mb-8">
+        <img
+          src="mascot.png"
+          alt="Ironbeard AI mascot — a hooded blacksmith at his forge"
+          class="w-48 md:w-64 h-auto mx-auto drop-shadow-[0_8px_32px_rgba(249,115,22,0.25)]"
+          style="animation: mascot-float 4s ease-in-out infinite;"
+          width="256" height="298"
+        >
       </div>
-      <div class="countdown-box">
-        <span class="countdown-value" id="hours">--</span>
-        <span class="countdown-label">Hours</span>
+
+      <!-- Headline -->
+      <h1 class="font-heading font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight mb-6 text-white">
+        Your AI assistants.<br>
+        <span class="text-ember">Your rules.</span> Your computer.
+      </h1>
+
+      <!-- Subhead -->
+      <p class="text-iron-200 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
+        I got tired of every chatbot forgetting everything and mixing my projects together. So I built Ironbeard &mdash; separate workspaces, each with its own memory, tools, and personality. I use it every day. Your files stay on your machine. You bring your own API keys.
+      </p>
+
+      <!-- Countdown -->
+      <div class="flex justify-center gap-3 md:gap-4 mb-10">
+        <div class="bg-forge-700 border border-forge-500 rounded-xl px-4 py-3 md:px-5 md:py-4 min-w-[70px] md:min-w-[80px]">
+          <div class="font-heading font-bold text-2xl md:text-3xl text-ember-light" id="days">--</div>
+          <div class="text-xs text-iron-400 uppercase tracking-wider mt-1">Days</div>
+        </div>
+        <div class="bg-forge-700 border border-forge-500 rounded-xl px-4 py-3 md:px-5 md:py-4 min-w-[70px] md:min-w-[80px]">
+          <div class="font-heading font-bold text-2xl md:text-3xl text-ember-light" id="hours">--</div>
+          <div class="text-xs text-iron-400 uppercase tracking-wider mt-1">Hours</div>
+        </div>
+        <div class="bg-forge-700 border border-forge-500 rounded-xl px-4 py-3 md:px-5 md:py-4 min-w-[70px] md:min-w-[80px]">
+          <div class="font-heading font-bold text-2xl md:text-3xl text-ember-light" id="mins">--</div>
+          <div class="text-xs text-iron-400 uppercase tracking-wider mt-1">Min</div>
+        </div>
+        <div class="bg-forge-700 border border-forge-500 rounded-xl px-4 py-3 md:px-5 md:py-4 min-w-[70px] md:min-w-[80px]">
+          <div class="font-heading font-bold text-2xl md:text-3xl text-ember-light" id="secs">--</div>
+          <div class="text-xs text-iron-400 uppercase tracking-wider mt-1">Sec</div>
+        </div>
       </div>
-      <div class="countdown-box">
-        <span class="countdown-value" id="mins">--</span>
-        <span class="countdown-label">Min</span>
+
+      <!-- Email Signup -->
+      <div id="signup" class="w-full max-w-md mx-auto mb-6">
+        <form action="https://formsubmit.co/ironbeardai@gmail.com" method="POST" class="flex flex-col sm:flex-row gap-3">
+          <input type="hidden" name="_subject" value="New Ironbeard Beta Signup">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://ironbeard.ai">
+          <input type="email" name="email" required placeholder="Enter your email"
+            class="flex-1 bg-forge-700 border border-forge-500 text-iron-100 placeholder-iron-400 rounded-xl px-5 py-4 text-base focus:outline-none focus:border-ember transition-colors">
+          <button type="submit" class="btn-glow bg-ember hover:bg-ember-dark text-white font-semibold text-base px-6 py-4 rounded-xl transition-all inline-flex items-center justify-center gap-2 whitespace-nowrap">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+            Join the Beta
+          </button>
+        </form>
+        <p class="text-iron-400 text-xs mt-3 text-center">Free during beta. No spam, ever.</p>
       </div>
-      <div class="countdown-box">
-        <span class="countdown-value" id="secs">--</span>
-        <span class="countdown-label">Sec</span>
+      <div class="flex items-center justify-center">
+        <a href="https://twitter.com/ironbeardai" target="_blank" rel="noopener noreferrer" class="text-iron-300 hover:text-ember transition-colors inline-flex items-center gap-2 text-sm font-medium">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          Follow @ironbeardai on X
+        </a>
       </div>
     </div>
+  </section>
 
-    <div class="socials">
-      <a href="https://x.com/ironbeardai" target="_blank" rel="noopener noreferrer">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-        @ironbeardai
-      </a>
-      <a href="mailto:ironbeardai@gmail.com">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-        ironbeardai@gmail.com
-      </a>
+
+  <!-- ========== THE PROBLEM ========== -->
+  <section id="problem" class="relative py-24 md:py-32">
+    <div class="section-glow absolute inset-0 pointer-events-none"></div>
+    <div class="relative z-10 max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="text-ember text-sm font-semibold uppercase tracking-wider mb-3">The Problem</p>
+        <h2 class="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-white">AI assistants weren't built for real work.</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+        <!-- Card 1 -->
+        <div class="card-hover bg-forge-700 border border-forge-500 rounded-2xl p-8">
+          <div class="w-12 h-12 bg-ember/10 border border-ember/20 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-ember" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z"/></svg>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-white mb-3">They forget everything</h3>
+          <p class="text-iron-300 leading-relaxed">Start a new chat, start from scratch. ChatGPT doesn't know what you were working on yesterday.</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card-hover bg-forge-700 border border-forge-500 rounded-2xl p-8">
+          <div class="w-12 h-12 bg-ember/10 border border-ember/20 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-ember" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 21L3 16.5m0 0L7.5 12M3 16.5h13.5m0-13.5L21 7.5m0 0L16.5 12M21 7.5H7.5"/></svg>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-white mb-3">Your stuff gets mixed together</h3>
+          <p class="text-iron-300 leading-relaxed">Work projects bleed into personal. Client A's info shows up when you're helping Client B.</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card-hover bg-forge-700 border border-forge-500 rounded-2xl p-8">
+          <div class="w-12 h-12 bg-ember/10 border border-ember/20 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-ember" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z"/><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-white mb-3">You have zero control</h3>
+          <p class="text-iron-300 leading-relaxed">They store your conversations, train on your data, and decide what you can access. You're renting someone else's brain &mdash; on their terms.</p>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
+
+
+  <!-- ========== THE SOLUTION ========== -->
+  <section id="solution" class="relative py-24 md:py-32 bg-forge-800/50">
+    <div class="relative z-10 max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="text-ember text-sm font-semibold uppercase tracking-wider mb-3">The Solution</p>
+        <h2 class="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-white">Ironbeard is different.</h2>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6 md:gap-8">
+        <!-- Feature 1 -->
+        <div class="card-hover bg-forge-700 border border-forge-500 rounded-2xl p-8">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-ember/10 border border-ember/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+              <svg class="w-5 h-5 text-ember" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25a2.25 2.25 0 01-2.25-2.25v-2.25z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-lg text-white mb-2">Workspaces that actually separate</h3>
+              <p class="text-iron-300 leading-relaxed">Each workspace has its own AI personality, its own memory, its own tools. They don't touch each other.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="card-hover bg-forge-700 border border-forge-500 rounded-2xl p-8">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-ember/10 border border-ember/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+              <svg class="w-5 h-5 text-ember" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 0v3.75m-16.5-3.75v3.75m16.5 0v3.75C20.25 16.153 16.556 18 12 18s-8.25-1.847-8.25-4.125v-3.75m16.5 0c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125"/></svg>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-lg text-white mb-2">A vault that remembers</h3>
+              <p class="text-iron-300 leading-relaxed">Drop files into your vault. The AI indexes them and can reference them anytime. Your research stays with you.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="card-hover bg-forge-700 border border-forge-500 rounded-2xl p-8">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-ember/10 border border-ember/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+              <svg class="w-5 h-5 text-ember" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25"/></svg>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-lg text-white mb-2">Your keys. Your machine. Your cost.</h3>
+              <p class="text-iron-300 leading-relaxed">Bring your own Claude API key &mdash; no middleman subscription. Your files and memory stay local. A $450 laptop runs it fine.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="card-hover bg-forge-700 border border-forge-500 rounded-2xl p-8">
+          <div class="flex items-start gap-4">
+            <div class="w-10 h-10 bg-ember/10 border border-ember/20 rounded-lg flex items-center justify-center flex-shrink-0 mt-1">
+              <svg class="w-5 h-5 text-ember" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17l-5.1 3.175a.75.75 0 01-1.12-.79l.975-5.685-4.13-4.026a.75.75 0 01.416-1.28l5.707-.829L10.72 1.1a.75.75 0 011.36 0l2.558 5.18 5.707.83a.75.75 0 01.416 1.279l-4.13 4.026.975 5.685a.75.75 0 01-1.12.79l-5.1-3.175z"/></svg>
+            </div>
+            <div>
+              <h3 class="font-heading font-semibold text-lg text-white mb-2">Smart about cost</h3>
+              <p class="text-iron-300 leading-relaxed">Claude handles the thinking. Gemini and Haiku handle the grunt work. You get top-tier AI without top-tier bills.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== REAL EXAMPLES ========== -->
+  <section id="examples" class="relative py-24 md:py-32">
+    <div class="section-glow absolute inset-0 pointer-events-none"></div>
+    <div class="relative z-10 max-w-6xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="text-ember text-sm font-semibold uppercase tracking-wider mb-3">Real Examples</p>
+        <h2 class="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-white">One app. Infinite setups.</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6 md:gap-8">
+        <!-- Example 1 -->
+        <div class="card-hover bg-forge-700 border border-forge-500 rounded-2xl p-8 flex flex-col">
+          <div class="w-12 h-12 bg-ember/10 border border-ember/20 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-ember" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-white mb-3">Bible Study Assistant</h3>
+          <p class="text-iron-300 leading-relaxed flex-1">A pastor's sermons on YouTube &mdash; transcribed and indexed in the vault &mdash; now you can ask questions and get answers based on his actual words. Running on a $450 laptop.</p>
+        </div>
+
+        <!-- Example 2 -->
+        <div class="card-hover bg-forge-700 border border-forge-500 rounded-2xl p-8 flex flex-col">
+          <div class="w-12 h-12 bg-ember/10 border border-ember/20 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-ember" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.15c0 .415.336.75.75.75z"/></svg>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-white mb-3">Small Business Helper</h3>
+          <p class="text-iron-300 leading-relaxed flex-1">Card shop owner ripping packs on stream &mdash; inventory tracking, customer emails, social posts &mdash; one workspace that knows the whole operation.</p>
+        </div>
+
+        <!-- Example 3 -->
+        <div class="card-hover bg-forge-700 border border-forge-500 rounded-2xl p-8 flex flex-col">
+          <div class="w-12 h-12 bg-ember/10 border border-ember/20 rounded-xl flex items-center justify-center mb-5">
+            <svg class="w-6 h-6 text-ember" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5"/></svg>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-white mb-3">Developer Workbench</h3>
+          <p class="text-iron-300 leading-relaxed flex-1">5 workspaces running simultaneously &mdash; each project isolated &mdash; AI builds MCP tools, manages code, handles research &mdash; no more context switching between Claude and ChatGPT tabs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== HOW IT WORKS ========== -->
+  <section id="how-it-works" class="relative py-24 md:py-32 bg-forge-800/50">
+    <div class="relative z-10 max-w-5xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="text-ember text-sm font-semibold uppercase tracking-wider mb-3">Getting Started</p>
+        <h2 class="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-white">Up and running in 5 minutes.</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 md:gap-12">
+        <!-- Step 1 -->
+        <div class="text-center relative">
+          <div class="w-14 h-14 bg-ember rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-ember/20">
+            <span class="font-heading font-bold text-xl text-white">1</span>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-white mb-3">Download</h3>
+          <p class="text-iron-300 leading-relaxed">Free beta. Runs on Windows (Mac coming soon).</p>
+          <!-- Connector arrow (desktop only) -->
+          <div class="hidden md:block absolute top-7 left-[calc(50%+36px)] w-[calc(100%-72px)]">
+            <svg class="w-full h-4 text-ember/30" viewBox="0 0 200 16" fill="none"><path d="M0 8h190m0 0l-8-6m8 6l-8 6" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="text-center relative">
+          <div class="w-14 h-14 bg-ember rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-ember/20">
+            <span class="font-heading font-bold text-xl text-white">2</span>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-white mb-3">Add your API keys</h3>
+          <p class="text-iron-300 leading-relaxed">Claude is the brain. Gemini and Haiku keep costs down. You'll need a Claude key to start &mdash; the rest is optional.</p>
+          <!-- Connector arrow (desktop only) -->
+          <div class="hidden md:block absolute top-7 left-[calc(50%+36px)] w-[calc(100%-72px)]">
+            <svg class="w-full h-4 text-ember/30" viewBox="0 0 200 16" fill="none"><path d="M0 8h190m0 0l-8-6m8 6l-8 6" stroke="currentColor" stroke-width="2"/></svg>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="text-center">
+          <div class="w-14 h-14 bg-ember rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-ember/20">
+            <span class="font-heading font-bold text-xl text-white">3</span>
+          </div>
+          <h3 class="font-heading font-semibold text-xl text-white mb-3">Set up your first workspace</h3>
+          <p class="text-iron-300 leading-relaxed">Name it. Give it a personality. Start working.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========== BETA CTA ========== -->
+  <section class="relative py-24 md:py-32">
+    <div class="section-glow absolute inset-0 pointer-events-none"></div>
+    <!-- Accent glow -->
+    <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+      <div class="w-[600px] h-[300px] rounded-full" style="background: radial-gradient(ellipse, rgba(249,115,22,0.08) 0%, transparent 70%);"></div>
+    </div>
+
+    <div class="relative z-10 max-w-3xl mx-auto px-6 text-center">
+      <h2 class="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-white mb-4">I built this for me. You can have it too.</h2>
+      <p class="text-iron-200 text-lg md:text-xl mb-10 leading-relaxed">Ironbeard is my daily driver &mdash; I use it every day to run my own work. If you want to try it, it's free during beta. Early testers get <span class="text-ember font-semibold">75% off</span> if it ever goes paid.</p>
+
+      <div class="w-full max-w-md mx-auto">
+        <form action="https://formsubmit.co/ironbeardai@gmail.com" method="POST" class="flex flex-col sm:flex-row gap-3">
+          <input type="hidden" name="_subject" value="New Ironbeard Beta Signup">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_next" value="https://ironbeard.ai">
+          <input type="email" name="email" required placeholder="Enter your email"
+            class="flex-1 bg-forge-700 border border-forge-500 text-iron-100 placeholder-iron-400 rounded-xl px-5 py-4 text-base focus:outline-none focus:border-ember transition-colors">
+          <button type="submit" class="btn-glow bg-ember hover:bg-ember-dark text-white font-semibold text-base px-6 py-4 rounded-xl transition-all inline-flex items-center justify-center gap-2 whitespace-nowrap">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/></svg>
+            Get Ironbeard Free
+          </button>
+        </form>
+      </div>
+
+      <p class="text-iron-400 text-sm mt-6">
+        Questions? <a href="mailto:ironbeardai@gmail.com" class="text-iron-300 hover:text-ember underline transition-colors">ironbeardai@gmail.com</a>
+      </p>
+    </div>
+  </section>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="border-t border-forge-500/50 py-8">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-iron-400 text-sm">&copy; 2026 Ironbeard</p>
+      <div class="flex items-center gap-6">
+        <a href="https://twitter.com/ironbeardai" target="_blank" rel="noopener noreferrer" class="text-iron-400 hover:text-ember transition-colors inline-flex items-center gap-2 text-sm">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          @ironbeardai
+        </a>
+        <a href="mailto:ironbeardai@gmail.com" class="text-iron-400 hover:text-ember transition-colors inline-flex items-center gap-2 text-sm">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
+          ironbeardai@gmail.com
+        </a>
+      </div>
+    </div>
+  </footer>
+
 
   <script>
+    // ========== COUNTDOWN TIMER ==========
     (function () {
-      const launch = new Date('2026-02-28T00:00:00').getTime();
+      // Feb 28, 2026 12:00 PM EST = 17:00 UTC
+      const launch = new Date('2026-02-28T17:00:00Z').getTime();
       const $days = document.getElementById('days');
       const $hours = document.getElementById('hours');
       const $mins = document.getElementById('mins');
       const $secs = document.getElementById('secs');
 
-      function pad(n) {
-        return String(n).padStart(2, '0');
-      }
+      function pad(n) { return String(n).padStart(2, '0'); }
 
       function tick() {
-        const now = Date.now();
-        const diff = launch - now;
-
+        const diff = launch - Date.now();
         if (diff <= 0) {
           $days.textContent = '00';
           $hours.textContent = '00';
@@ -348,21 +543,58 @@
           $secs.textContent = '00';
           return;
         }
-
-        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        const s = Math.floor((diff % (1000 * 60)) / 1000);
-
-        $days.textContent = pad(d);
-        $hours.textContent = pad(h);
-        $mins.textContent = pad(m);
-        $secs.textContent = pad(s);
+        $days.textContent = pad(Math.floor(diff / 86400000));
+        $hours.textContent = pad(Math.floor((diff % 86400000) / 3600000));
+        $mins.textContent = pad(Math.floor((diff % 3600000) / 60000));
+        $secs.textContent = pad(Math.floor((diff % 60000) / 1000));
       }
 
       tick();
       setInterval(tick, 1000);
     })();
+
+    // ========== MOBILE MENU ==========
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen = document.getElementById('menu-icon-open');
+    const iconClose = document.getElementById('menu-icon-close');
+    let menuOpen = false;
+
+    function closeMobileMenu() {
+      menuOpen = false;
+      mobileMenu.classList.remove('open');
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+    }
+
+    menuToggle.addEventListener('click', () => {
+      menuOpen = !menuOpen;
+      if (menuOpen) {
+        mobileMenu.classList.add('open');
+        iconOpen.classList.add('hidden');
+        iconClose.classList.remove('hidden');
+      } else {
+        closeMobileMenu();
+      }
+    });
+
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+      if (menuOpen && !mobileMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+        closeMobileMenu();
+      }
+    });
+
+    // ========== SMOOTH SCROLL FOR NAV LINKS ==========
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
   </script>
 </body>
 </html>
