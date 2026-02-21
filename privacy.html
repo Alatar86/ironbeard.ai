@@ -5,6 +5,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Privacy Policy — Ironbeard</title>
   <meta name="description" content="Privacy Policy for Ironbeard — local AI assistant software. We don't collect your data.">
+  <meta property="og:title" content="Privacy Policy — Ironbeard">
+  <meta property="og:description" content="Privacy Policy for Ironbeard — local AI assistant software. We don't collect your data.">
+  <meta property="og:image" content="https://ironbeard.ai/mascot.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ironbeard.ai/privacy.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ironbeardai">
+  <meta name="twitter:title" content="Privacy Policy — Ironbeard">
+  <meta name="twitter:description" content="Privacy Policy for Ironbeard — local AI assistant software. We don't collect your data.">
+  <meta name="twitter:image" content="https://ironbeard.ai/mascot.png">
+  <link rel="canonical" href="https://ironbeard.ai/privacy.html">
+  <link rel="icon" type="image/png" href="/mascot.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -71,14 +83,17 @@
     .mobile-menu.open {
       transform: translateX(0);
     }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    a:focus-visible { outline: 2px solid #f97316; outline-offset: 2px; border-radius: 2px; }
   </style>
 </head>
 <body class="bg-forge-950 text-iron-100 font-body">
+<a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-ember focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Skip to main content</a>
 
   <!-- ========== NAV ========== -->
   <nav class="fixed top-0 left-0 right-0 z-50 bg-forge-950/80 backdrop-blur-md border-b border-forge-500/50">
     <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-      <a href="index.html" class="font-heading font-bold text-xl tracking-widest text-iron-100">IRONBEARD</a>
+      <a href="/" class="font-heading font-bold text-xl tracking-widest text-iron-100">IRONBEARD</a>
       <div class="hidden md:flex items-center gap-8">
         <a href="index.html#problem" class="text-sm text-iron-300 hover:text-ember transition-colors">The Problem</a>
         <a href="index.html#solution" class="text-sm text-iron-300 hover:text-ember transition-colors">Solution</a>
@@ -87,8 +102,8 @@
         <a href="index.html#tools" class="text-sm text-iron-300 hover:text-ember transition-colors">Tools</a>
         <a href="index.html#signup" class="bg-ember hover:bg-ember-dark text-white text-sm font-semibold px-5 py-2 rounded-lg transition-colors">Join the Beta</a>
       </div>
-      <button id="menu-toggle" class="md:hidden text-iron-200 hover:text-ember transition-colors" aria-label="Toggle menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <button id="menu-toggle" class="md:hidden text-iron-200 hover:text-ember transition-colors" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
+        <svg aria-hidden="true" class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path id="menu-icon-open" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
           <path id="menu-icon-close" stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" class="hidden"/>
         </svg>
@@ -97,17 +112,17 @@
   </nav>
   <div id="mobile-backdrop" class="mobile-backdrop fixed inset-0 top-16 z-40 bg-black/60 md:hidden"></div>
   <div id="mobile-menu" class="mobile-menu fixed top-16 right-0 bottom-0 w-72 z-50 bg-forge-800 border-l border-forge-500/50 p-8 flex flex-col gap-6 md:hidden">
-    <a href="index.html#problem" class="text-iron-200 hover:text-ember transition-colors text-lg" onclick="closeMobileMenu()">The Problem</a>
-    <a href="index.html#solution" class="text-iron-200 hover:text-ember transition-colors text-lg" onclick="closeMobileMenu()">Solution</a>
-    <a href="index.html#examples" class="text-iron-200 hover:text-ember transition-colors text-lg" onclick="closeMobileMenu()">Examples</a>
-    <a href="index.html#how-it-works" class="text-iron-200 hover:text-ember transition-colors text-lg" onclick="closeMobileMenu()">How It Works</a>
-    <a href="index.html#tools" class="text-iron-200 hover:text-ember transition-colors text-lg" onclick="closeMobileMenu()">Tools</a>
-    <a href="index.html#signup" class="bg-ember hover:bg-ember-dark text-white font-semibold px-5 py-3 rounded-lg transition-colors text-center mt-4" onclick="closeMobileMenu()">Join the Beta</a>
+    <a href="index.html#problem" class="text-iron-200 hover:text-ember transition-colors text-lg">The Problem</a>
+    <a href="index.html#solution" class="text-iron-200 hover:text-ember transition-colors text-lg">Solution</a>
+    <a href="index.html#examples" class="text-iron-200 hover:text-ember transition-colors text-lg">Examples</a>
+    <a href="index.html#how-it-works" class="text-iron-200 hover:text-ember transition-colors text-lg">How It Works</a>
+    <a href="index.html#tools" class="text-iron-200 hover:text-ember transition-colors text-lg">Tools</a>
+    <a href="index.html#signup" class="bg-ember hover:bg-ember-dark text-white font-semibold px-5 py-3 rounded-lg transition-colors text-center mt-4">Join the Beta</a>
   </div>
 
 
   <!-- ========== CONTENT ========== -->
-  <main class="pt-28 pb-20 px-6">
+  <main id="main-content" class="pt-28 pb-20 px-6">
     <div class="max-w-3xl mx-auto">
 
       <h1 class="font-heading text-4xl md:text-5xl font-bold mb-2">Privacy Policy</h1>
@@ -229,52 +244,63 @@
   </main>
 
 
-  <!-- ========== FOOTER ========== -->
-  <footer class="border-t border-forge-500/50 py-8">
-    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-      <p class="text-iron-400 text-sm">&copy; 2026 Ironbeard</p>
-      <div class="flex items-center gap-6">
-        <a href="terms.html" class="text-iron-400 hover:text-ember transition-colors text-sm">Terms &amp; Conditions</a>
-        <a href="privacy.html" class="text-iron-400 hover:text-ember transition-colors text-sm">Privacy Policy</a>
-        <a href="https://twitter.com/ironbeardai" target="_blank" rel="noopener noreferrer" class="text-iron-400 hover:text-ember transition-colors inline-flex items-center gap-2 text-sm">
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-          @ironbeardai
-        </a>
-        <a href="mailto:ironbeardai@gmail.com" class="text-iron-400 hover:text-ember transition-colors inline-flex items-center gap-2 text-sm">
-          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
-          ironbeardai@gmail.com
-        </a>
-      </div>
+<!-- ========== FOOTER ========== -->
+<footer class="border-t border-forge-500/50 py-8">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+    <p class="text-iron-400 text-sm">&copy; 2026 Ironbeard</p>
+    <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+      <a href="terms.html" class="text-iron-400 hover:text-ember transition-colors text-sm">Terms &amp; Conditions</a>
+      <a href="privacy.html" class="text-iron-400 hover:text-ember transition-colors text-sm">Privacy Policy</a>
+      <a href="https://twitter.com/ironbeardai" target="_blank" rel="noopener noreferrer" class="text-iron-400 hover:text-ember transition-colors inline-flex items-center gap-2 text-sm">
+        <svg aria-hidden="true" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        @ironbeardai
+      </a>
+      <a href="mailto:ironbeardai@gmail.com" class="text-iron-400 hover:text-ember transition-colors inline-flex items-center gap-2 text-sm">
+        <svg aria-hidden="true" class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
+        ironbeardai@gmail.com
+      </a>
     </div>
-  </footer>
+  </div>
+</footer>
 
 
-  <script>
+<script>
+  (function () {
     const menuToggle = document.getElementById('menu-toggle');
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileBackdrop = document.getElementById('mobile-backdrop');
     const iconOpen = document.getElementById('menu-icon-open');
     const iconClose = document.getElementById('menu-icon-close');
     let menuOpen = false;
+
     function closeMobileMenu() {
       menuOpen = false;
-      mobileMenu.classList.remove('open');
-      mobileBackdrop.classList.remove('open');
-      iconOpen.classList.remove('hidden');
-      iconClose.classList.add('hidden');
+      mobileMenu?.classList.remove('open');
+      mobileBackdrop?.classList.remove('open');
+      iconOpen?.classList.remove('hidden');
+      iconClose?.classList.add('hidden');
+      menuToggle?.setAttribute('aria-expanded', 'false');
     }
+
     menuToggle?.addEventListener('click', () => {
       menuOpen = !menuOpen;
       if (menuOpen) {
-        mobileMenu.classList.add('open');
-        mobileBackdrop.classList.add('open');
-        iconOpen.classList.add('hidden');
-        iconClose.classList.remove('hidden');
+        mobileMenu?.classList.add('open');
+        mobileBackdrop?.classList.add('open');
+        iconOpen?.classList.add('hidden');
+        iconClose?.classList.remove('hidden');
+        menuToggle.setAttribute('aria-expanded', 'true');
       } else {
         closeMobileMenu();
       }
     });
+
     mobileBackdrop?.addEventListener('click', closeMobileMenu);
-  </script>
+
+    mobileMenu?.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+  })();
+</script>
 </body>
 </html>

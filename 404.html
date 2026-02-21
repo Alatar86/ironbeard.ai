@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Page Not Found — Ironbeard</title>
+  <meta name="description" content="The page you're looking for doesn't exist. Head back to Ironbeard — local AI assistants that actually work.">
+  <meta property="og:title" content="Page Not Found — Ironbeard">
+  <meta property="og:description" content="The page you're looking for doesn't exist. Head back to Ironbeard — local AI assistants that actually work.">
+  <meta property="og:image" content="https://ironbeard.ai/mascot.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ironbeard.ai/404.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ironbeardai">
+  <meta name="twitter:title" content="Page Not Found — Ironbeard">
+  <meta name="twitter:description" content="The page you're looking for doesn't exist. Head back to Ironbeard.">
+  <meta name="twitter:image" content="https://ironbeard.ai/mascot.png">
+  <link rel="canonical" href="https://ironbeard.ai/404.html">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forge: {
+              950: '#080808',
+              900: '#0a0a0a',
+              800: '#111111',
+              700: '#161616',
+              600: '#1a1a1a',
+              500: '#222222',
+              400: '#2a2a2a',
+              300: '#333333',
+            },
+            ember: {
+              DEFAULT: '#f97316',
+              light: '#fb923c',
+              dark: '#ea580c',
+              glow: 'rgba(249, 115, 22, 0.15)',
+            },
+            iron: {
+              100: '#f0e6d8',
+              200: '#c4b8a8',
+              300: '#9a8e7e',
+              400: '#7a7068',
+              500: '#5a5048',
+            }
+          },
+          fontFamily: {
+            heading: ['Space Grotesk', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #080808;
+      color: #f0e6d8;
+      -webkit-font-smoothing: antialiased;
+    }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border-width: 0;
+    }
+    :focus-visible {
+      outline: 2px solid #f97316;
+      outline-offset: 2px;
+    }
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: #080808; }
+    ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: #555; }
+  </style>
+</head>
+<body class="bg-forge-950 text-iron-100 font-body min-h-screen flex flex-col">
+
+  <!-- Skip nav -->
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[100] focus:bg-ember focus:text-white focus:px-4 focus:py-2 focus:rounded-lg">Skip to main content</a>
+
+  <!-- ========== NAV ========== -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-forge-950/80 backdrop-blur-md border-b border-forge-500/50">
+    <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <a href="/" class="font-heading font-bold text-xl tracking-widest text-iron-100">IRONBEARD</a>
+    </div>
+  </nav>
+
+
+  <!-- ========== MAIN ========== -->
+  <main id="main" class="flex-1 flex items-center justify-center pt-16">
+    <div class="max-w-2xl mx-auto px-6 text-center py-24 md:py-32">
+      <!-- Large 404 -->
+      <h1 class="font-heading font-bold text-8xl md:text-9xl text-ember mb-4" style="text-shadow: 0 0 60px rgba(249,115,22,0.3);">404</h1>
+
+      <!-- Subheading -->
+      <h2 class="font-heading font-semibold text-2xl md:text-3xl text-white mb-4">Page not found</h2>
+
+      <!-- Message -->
+      <p class="text-iron-300 text-lg leading-relaxed mb-10 max-w-md mx-auto">The page you're looking for doesn't exist or has been moved. Let's get you back to the forge.</p>
+
+      <!-- Back to homepage button -->
+      <a href="/" class="inline-flex items-center justify-center gap-2 bg-ember hover:bg-ember-dark text-white font-semibold text-base px-8 py-4 rounded-xl transition-colors">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"/></svg>
+        Back to Homepage
+      </a>
+    </div>
+  </main>
+
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="border-t border-forge-500/50 py-8">
+    <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p class="text-iron-400 text-sm">&copy; 2026 Ironbeard</p>
+      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+        <a href="terms.html" class="text-iron-400 hover:text-ember transition-colors text-sm">Terms &amp; Conditions</a>
+        <a href="privacy.html" class="text-iron-400 hover:text-ember transition-colors text-sm">Privacy Policy</a>
+        <a href="https://twitter.com/ironbeardai" target="_blank" rel="noopener noreferrer" class="text-iron-400 hover:text-ember transition-colors inline-flex items-center gap-2 text-sm">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          @ironbeardai
+        </a>
+        <a href="mailto:ironbeardai@gmail.com" class="text-iron-400 hover:text-ember transition-colors inline-flex items-center gap-2 text-sm">
+          <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 01-2.06 0L2 7"/></svg>
+          ironbeardai@gmail.com
+        </a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
