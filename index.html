@@ -13,13 +13,14 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@ironbeardai">
   <meta name="twitter:title" content="Ironbeard — Local AI Assistants That Actually Work">
-  <meta name="twitter:description" content="Your AI assistants. Your rules. Your computer. Launching February 28, 2026.">
+  <meta name="twitter:description" content="Your AI assistants. Your rules. Your computer.">
   <meta name="twitter:image" content="https://ironbeard.ai/mascot.png">
   <link rel="canonical" href="https://ironbeard.ai/">
   <link rel="icon" type="image/png" href="/mascot.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://app.lemonsqueezy.com/js/lemon.js" defer></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -192,7 +193,7 @@
         <a href="#examples" class="text-sm text-iron-300 hover:text-ember transition-colors">Examples</a>
         <a href="#how-it-works" class="text-sm text-iron-300 hover:text-ember transition-colors">How It Works</a>
         <a href="#tools" class="text-sm text-iron-300 hover:text-ember transition-colors">Tools</a>
-        <a href="#signup" class="bg-ember hover:bg-ember-dark text-white text-sm font-semibold px-5 py-2 rounded-lg transition-colors">Join the Beta</a>
+        <a href="https://purchase.ironbeard.ai/checkout/buy/6f3209dc-e456-4bc6-8469-81cbe8232edd?discount=0" class="lemonsqueezy-button bg-ember hover:bg-ember-dark text-white text-sm font-semibold px-5 py-2 rounded-lg transition-colors">Download Free</a>
       </div>
       <!-- Mobile hamburger -->
       <button id="menu-toggle" class="md:hidden text-iron-200 hover:text-ember transition-colors" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobile-menu">
@@ -211,7 +212,7 @@
     <a href="#examples" class="text-iron-200 hover:text-ember transition-colors text-lg">Examples</a>
     <a href="#how-it-works" class="text-iron-200 hover:text-ember transition-colors text-lg">How It Works</a>
     <a href="#tools" class="text-iron-200 hover:text-ember transition-colors text-lg">Tools</a>
-    <a href="#signup" class="bg-ember hover:bg-ember-dark text-white font-semibold px-5 py-3 rounded-lg transition-colors text-center mt-4">Join the Beta</a>
+    <a href="https://purchase.ironbeard.ai/checkout/buy/6f3209dc-e456-4bc6-8469-81cbe8232edd?discount=0" class="lemonsqueezy-button bg-ember hover:bg-ember-dark text-white font-semibold px-5 py-3 rounded-lg transition-colors text-center mt-4">Download Free</a>
   </div>
 
 
@@ -248,42 +249,14 @@
         I got tired of every chatbot forgetting everything and mixing my projects together. So I built Ironbeard &mdash; separate workspaces, each with its own memory, tools, and personality. I use it every day. Your files stay on your machine. You bring your own API keys.
       </p>
 
-      <!-- Countdown -->
-      <div class="flex justify-center gap-3 md:gap-4 mb-10">
-        <div class="bg-forge-700 border border-forge-500 rounded-xl px-4 py-3 md:px-5 md:py-4 min-w-[70px] md:min-w-[80px]">
-          <div class="font-heading font-bold text-2xl md:text-3xl text-ember-light" id="days">--</div>
-          <div class="text-xs text-iron-400 uppercase tracking-wider mt-1">Days</div>
-        </div>
-        <div class="bg-forge-700 border border-forge-500 rounded-xl px-4 py-3 md:px-5 md:py-4 min-w-[70px] md:min-w-[80px]">
-          <div class="font-heading font-bold text-2xl md:text-3xl text-ember-light" id="hours">--</div>
-          <div class="text-xs text-iron-400 uppercase tracking-wider mt-1">Hours</div>
-        </div>
-        <div class="bg-forge-700 border border-forge-500 rounded-xl px-4 py-3 md:px-5 md:py-4 min-w-[70px] md:min-w-[80px]">
-          <div class="font-heading font-bold text-2xl md:text-3xl text-ember-light" id="mins">--</div>
-          <div class="text-xs text-iron-400 uppercase tracking-wider mt-1">Min</div>
-        </div>
-        <div class="bg-forge-700 border border-forge-500 rounded-xl px-4 py-3 md:px-5 md:py-4 min-w-[70px] md:min-w-[80px]">
-          <div class="font-heading font-bold text-2xl md:text-3xl text-ember-light" id="secs">--</div>
-          <div class="text-xs text-iron-400 uppercase tracking-wider mt-1">Sec</div>
-        </div>
-      </div>
-
-      <!-- Email Signup -->
-      <div id="signup" class="w-full max-w-md mx-auto mb-6">
-        <form action="https://formsubmit.co/ironbeardai@gmail.com" method="POST" class="flex flex-col sm:flex-row gap-3">
-          <input type="hidden" name="_subject" value="New Ironbeard Beta Signup">
-          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-          <label for="email-hero" class="sr-only">Email address</label>
-          <input id="email-hero" type="email" name="email" required placeholder="Enter your email" autocomplete="email"
-            class="flex-1 bg-forge-700 border border-forge-500 text-iron-100 placeholder-iron-400 rounded-xl px-5 py-4 text-base focus:outline-none focus:border-ember transition-colors">
-          <button type="submit" class="btn-glow bg-ember hover:bg-ember-dark text-white font-semibold text-base px-6 py-4 rounded-xl transition-all inline-flex items-center justify-center gap-2 whitespace-nowrap">
-            <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-            Join the Beta
-          </button>
-        </form>
-        <p class="text-iron-400 text-xs mt-3 text-center">Free during beta. No spam, ever.</p>
-      </div>
-      <div class="flex items-center justify-center">
+      <!-- Download CTA -->
+      <div class="flex flex-col items-center gap-6">
+        <a href="https://purchase.ironbeard.ai/checkout/buy/6f3209dc-e456-4bc6-8469-81cbe8232edd?discount=0"
+          class="lemonsqueezy-button btn-glow bg-ember hover:bg-ember-dark text-white font-semibold text-lg px-8 py-4 rounded-xl transition-all inline-flex items-center justify-center gap-3">
+          <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+          Download Ironbeard — Free
+        </a>
+        <p class="text-iron-400 text-xs">Windows only. You bring your own API keys.</p>
         <a href="https://twitter.com/ironbeardai" target="_blank" rel="noopener noreferrer" class="text-iron-300 hover:text-ember transition-colors inline-flex items-center gap-2 text-sm font-medium">
           <svg aria-hidden="true" class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
           Follow @ironbeardai on X
@@ -584,7 +557,7 @@
         </div>
       </div>
 
-      <p class="text-center text-iron-400 text-sm mt-10">More tools are being forged. <a href="#signup" class="text-ember hover:text-ember-light underline transition-colors">Join the beta</a> to get notified.</p>
+      <p class="text-center text-iron-400 text-sm mt-10">More tools are being forged.</p>
     </div>
   </section>
 
@@ -599,21 +572,13 @@
 
     <div class="relative z-10 max-w-3xl mx-auto px-6 text-center">
       <h2 class="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-white mb-4">I built this for me. You can have it too.</h2>
-      <p class="text-iron-200 text-lg md:text-xl mb-10 leading-relaxed">Ironbeard is my daily driver &mdash; I use it every day to run my own work. If you want to try it, it's free during beta. Early testers get <span class="text-ember font-semibold">75% off</span> if it ever goes paid.</p>
+      <p class="text-iron-200 text-lg md:text-xl mb-10 leading-relaxed">Ironbeard is my daily driver &mdash; I use it every day to run my own work. Free to download. You bring your own API keys.</p>
 
-      <div class="w-full max-w-md mx-auto">
-        <form action="https://formsubmit.co/ironbeardai@gmail.com" method="POST" class="flex flex-col sm:flex-row gap-3">
-          <input type="hidden" name="_subject" value="New Ironbeard Beta Signup">
-          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
-          <label for="email-cta" class="sr-only">Email address</label>
-          <input id="email-cta" type="email" name="email" required placeholder="Enter your email" autocomplete="email"
-            class="flex-1 bg-forge-700 border border-forge-500 text-iron-100 placeholder-iron-400 rounded-xl px-5 py-4 text-base focus:outline-none focus:border-ember transition-colors">
-          <button type="submit" class="btn-glow bg-ember hover:bg-ember-dark text-white font-semibold text-base px-6 py-4 rounded-xl transition-all inline-flex items-center justify-center gap-2 whitespace-nowrap">
-            <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.59 14.37a6 6 0 01-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 006.16-12.12A14.98 14.98 0 009.631 8.41m5.96 5.96a14.926 14.926 0 01-5.841 2.58m-.119-8.54a6 6 0 00-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 00-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 01-2.448-2.448 14.9 14.9 0 01.06-.312m-2.24 2.39a4.493 4.493 0 00-1.757 4.306 4.493 4.493 0 004.306-1.758M16.5 9a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z"/></svg>
-            Get Ironbeard Free
-          </button>
-        </form>
-      </div>
+      <a href="https://purchase.ironbeard.ai/checkout/buy/6f3209dc-e456-4bc6-8469-81cbe8232edd?discount=0"
+        class="lemonsqueezy-button btn-glow bg-ember hover:bg-ember-dark text-white font-semibold text-lg px-8 py-4 rounded-xl transition-all inline-flex items-center justify-center gap-3">
+        <svg aria-hidden="true" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3"/></svg>
+        Download Ironbeard — Free
+      </a>
 
       <p class="text-iron-400 text-sm mt-6">
         Questions? <a href="mailto:ironbeardai@gmail.com" class="text-iron-300 hover:text-ember underline transition-colors">ironbeardai@gmail.com</a>
@@ -643,43 +608,6 @@
 
 
   <script>
-    // ========== COUNTDOWN TIMER ==========
-    (function () {
-      const launch = new Date('2026-02-28T17:00:00Z').getTime();
-      const $days = document.getElementById('days');
-      const $hours = document.getElementById('hours');
-      const $mins = document.getElementById('mins');
-      const $secs = document.getElementById('secs');
-
-      function pad(n) { return String(n).padStart(2, '0'); }
-
-      function tick() {
-        const diff = launch - Date.now();
-        if (diff <= 0) {
-          $days.textContent = '00';
-          $hours.textContent = '00';
-          $mins.textContent = '00';
-          $secs.textContent = '00';
-          return;
-        }
-        $days.textContent = pad(Math.floor(diff / 86400000));
-        $hours.textContent = pad(Math.floor((diff % 86400000) / 3600000));
-        $mins.textContent = pad(Math.floor((diff % 3600000) / 60000));
-        $secs.textContent = pad(Math.floor((diff % 60000) / 1000));
-      }
-
-      tick();
-      let timerId = setInterval(tick, 1000);
-      document.addEventListener('visibilitychange', () => {
-        if (document.hidden) {
-          clearInterval(timerId);
-        } else {
-          tick();
-          timerId = setInterval(tick, 1000);
-        }
-      });
-    })();
-
     // ========== MOBILE MENU ==========
     (function () {
       const menuToggle = document.getElementById('menu-toggle');
@@ -734,40 +662,6 @@
       });
     });
 
-    // ========== FORM SUBMISSION VIA AJAX ==========
-    (function () {
-      document.querySelectorAll('form[action^="https://formsubmit.co/"]').forEach(form => {
-        form.addEventListener('submit', function (e) {
-          e.preventDefault();
-          const btn = form.querySelector('button[type="submit"]');
-          const originalText = btn.innerHTML;
-          btn.disabled = true;
-          btn.innerHTML = '<span class="inline-flex items-center gap-2">Sending...</span>';
-
-          const formData = new FormData(form);
-          const actionUrl = form.action.replace('formsubmit.co/', 'formsubmit.co/ajax/');
-
-          fetch(actionUrl, {
-            method: 'POST',
-            body: formData,
-            headers: { 'Accept': 'application/json' }
-          })
-          .then(response => {
-            if (response.ok) {
-              form.reset();
-              btn.innerHTML = '<span class="inline-flex items-center gap-2 text-green-400">You\'re in! Check your email.</span>';
-              setTimeout(() => { btn.innerHTML = originalText; btn.disabled = false; }, 4000);
-            } else {
-              throw new Error('Submission failed');
-            }
-          })
-          .catch(() => {
-            btn.innerHTML = '<span class="inline-flex items-center gap-2 text-red-400">Something went wrong. Try again.</span>';
-            setTimeout(() => { btn.innerHTML = originalText; btn.disabled = false; }, 4000);
-          });
-        });
-      });
-    })();
   </script>
 </body>
 </html>
